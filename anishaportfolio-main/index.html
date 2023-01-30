@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comforter&family=IBM+Plex+Sans:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <title>Anisha Dhakal</title>
+    <link
+      rel="shortcut icon"
+      href="./images/darkimgani2.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
+    <style>
+      #loader{
+        position:fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgb(10, 10, 10);
+        z-index: 150; 
+        display: grid;
+        place-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .loading{
+        height:5rem;
+        width:5rem;
+        border-radius: 50%;
+        /* background-color: azure; */
+        position: relative;
+        margin-bottom: 5rem;
+      }
+      #loader h1{
+        color: #f5f5f5;
+      }
+      .loading::after{
+        content: "";
+        height:6rem;
+        width:6rem;
+        position: absolute;
+        border-radius: 50%;
+        background-color: transparent;
+        border-top: 5px solid red;
+        animation:rotate 0.8s infinite linear;
+      }
+      @keyframes rotate {
+        from{
+          transform: rotate(0deg);
+        }
+        to{
+          transform: rotate(360deg);
+        }
+      }
+     
+      .notready{
+        overflow-y: hidden;
+      }
+    </style>
+  </head>
+  <!-- <body class="notready"> -->
+  <body class="notready" onload="displayFunc()">
+    <div id="loader">
+      <div class="loading"></div>
+      
+      <h1>Loading...</h1>
+    </div>
+    <div id="totop">
+      <i class="fa fa-caret-up" aria-hidden="true"></i>
+    </div>
+    <div class="scrollindicator">
+      <div id="scrolldata"></div>
+    </div>
+    <div class="mobilenav">
+      <div id="closebtn"><i class="fas fa-times"></i></div>
+    </div>
+    <div class="hero">
+      <header>
+        <div class="logo"><a href="/">Anisha Dhakal</a></div>
+        <div class="burger" id="burger"><i class="fas fa-bars"></i></div>
+        <nav>
+          <ul>
+            <li><a href="#aboutme">About</a></li>
+            <li><a href="#languages">Languages</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="herotxt"><span>H</span>ello, <span>W</span>orld!</div>
+      <a href="#" class="scroll-icon"></a>
+
+      <img
+        id="base_img"
+        src="./images/darkimgani2.png"
+        alt="darkimg"
+        draggable="false"
+      />
+    </div>
+
+    <div id="aboutme" class="about">
+      <div class="sectiontitle" id="about"><h2>About</h2></div>
+      <div class="abouttxt">
+        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis
+        voluptatum earum quibusdam sequi veniam architecto. Quibusdam pariatur
+        ipsa veritatis est omnis amet cumque ipsum repellendus quis, fuga illum
+        veniam fugiat ducimus explicabo error velit at esse? Deleniti placeat
+        commodi veniam.
+        <br> -->
+        Howdy. Its me Anisha Dhakal. A passionate developer/programmer and
+        learner from Nepal. I am a web developer with an art and design
+        background.I began project by throughly
+        researching and then developing my ideas through creative thinking.
+        <!-- Having been a paasionate student in the field of web
+        development, I feel like exploring more about programming, integrating
+        the fine background about the basic to higher level of computer science
+        and programming through A2 Web. My current area of interest and
+        exploration is web development, programming and IT. I began project by
+        throughly researching and then developing my ideas through creative
+        thinking. -->
+      </div>
+    </div>
+
+    <section id="languages">
+      <div class="sectiontitle"><h2>Languages</h2></div>
+      <div class="langcontainer">
+        <figure class="langbox">
+          <img src="./images/c.svg" alt="c language logo" />
+          <figcaption>C</figcaption>
+        </figure>
+        <figure class="langbox">
+          <img src="./images/cpp.svg" alt="cpp language logo" />
+          <figcaption>C++</figcaption>
+        </figure>
+        <figure class="langbox">
+          <img src="./images/html.svg" alt="html language logo" />
+          <figcaption>HTML</figcaption>
+        </figure>
+        <figure class="langbox">
+          <img src="images/css.svg" alt="css language logo" />
+          <figcaption>CSS</figcaption>
+        </figure>
+        <figure class="langbox">
+          <img src="./images/js.svg" alt="JS language logo" />
+          <figcaption>JavaScript</figcaption>
+        </figure>
+        <figure class="langbox">
+          <img src="./images/python.svg" alt="Python language logo" />
+          <figcaption>Python</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="sectiontitle"><h2>Skills</h2></div>
+
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div class="swiperdata sd sd1">
+              <div class="sdtxt">
+                <h3> Web Development <i class="fas fa-laptop-code"></i> </h3>
+                <p>I have enhanced my skills in Web Development. The learning phase of Web Development begun since a year back which i am giving continuity till now. I do work in Web an App Pvt Ltd as a junior web developer.
+                  </p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="swiper-slide"><div class="swiperdata sd sd2">
+            <div class="sdtxt">
+              <h3> Art and Design <i class="fas fa-paint-brush"></i></h3>
+              <p>
+                Art and Design has been always a priority task for me. I love sketching too. I do love to make a UI/UX design of the many outlook and conver them into coding source
+                </p>
+            </div>
+          </div></div>
+          <div class="swiper-slide"><div class="swiperdata sd sd3">
+            <div class="sdtxt">
+              <h3>Photoshop <i class="fas fa-camera-retro"></i></h3>
+              <p>
+
+                I learned photshop as a extra course during my first semester, then after i know the basic of photoshop which i also utilize in my design.</p>
+            </div>
+          </div></div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev swnav"></div>
+        <div class="swiper-button-next swnav"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="sectiontitle"><h2>Education</h2></div>
+      <div class="timeline">
+        <!-- <div class="container left">
+          <div class="content">
+            <h2>2017</h2>
+            <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+          </div>
+        </div> -->
+        <div class="container left">
+          <div class="content">
+            <h2>2018 - 2020</h2>
+            <p>Science (Computer Science)
+              <br/>The Times International College<br/>
+            <strong>National Examinations Board (NEB)</strong></p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="content">
+            <h2>2021 - current</h2>
+            <p>Bachelor in Computer Science and Information Technology<br/>
+            Swastik College of IT<br/>
+          <strong>Tribhuvan University (TU)</strong></p>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="sectiontitle"><h2>Contact</h2></div>
+      <div class="contact-container">
+        <div class="imgblock">
+          <img src="./images/contact.png" alt="contact png" />
+        </div>
+        <form class="formblock">
+          <div class="input-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="input-group">
+            <label for="message">Message</label>
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              maxlength="500"
+              required
+            ></textarea>
+            <div><span id="length">0</span>/500</div>
+          </div>
+          <div class="input-group">
+            <button type="submit">Send</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="socialmedia">
+        Get Connected :
+        <a href="https://www.sololearn.com/profile/21872314/" target="_blank"
+          ><img src="./images/sololearn.webp" height="47px" width="47px" alt=""
+        /></a>
+        <a href="https://github.com/Anisha777" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/anisha-dhakal-231549213/"
+          target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </div>
+    </section>
+    <footer>
+      <div class="love">
+        Created with <span><i class="fas fa-heart"></i></span>
+      </div>
+      <div class="credits">Anisha Dhakal &copy; 2022 All Rights Reserved</div>
+    </footer>
+    <script>
+      const displayFunc =()=>{
+        document.body.classList.remove("notready");
+        document.getElementById("loader").style.display="none";
+      }
+    </script>
+    <script src="./js/particles.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+  </body>
+</html>
